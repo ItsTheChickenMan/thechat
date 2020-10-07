@@ -1,0 +1,56 @@
+<!DOCTPYE html>
+<html>
+  <head>
+    <title>THE CHAT</title>
+    <style>
+      body {
+        overflow: scroll;
+        height: 30000px;
+      }
+      #chat-header, #woah-p{
+        text-align: center;
+      }
+      #title {
+        position: fixed;
+        left: 50%;
+        width: 750px;
+        margin-left: -375px;
+      }
+      #online-stuff {
+        border: 2px;
+        position: fixed;
+        right: 20;
+      }
+      #input-stuff {
+        display: block;
+        position: fixed;
+        bottom: 100;
+        right: 20;
+      }
+      #chat-box {
+        position: relative;
+        top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="title">
+      <h1 id="chat-header">THE CHAT</h1>
+      <p id="woah-p"></p>
+    </div>
+    <h1 style="color: white"></h1>
+    <p style="color: white"></p>
+    <div id="online-stuff">
+      <p id="online-title"><strong>ONLINE:</strong></p>
+      <p id="online-box"></p>
+    </div>
+    <p id="chat-box"></p>
+    <div id="input-stuff">
+      <input type="text" maxlength="180" id="message-in" value="I joined the chat!">
+      <button id="button-in">Send</button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="static/chat.js"></script>
+  </body>
+</html>
